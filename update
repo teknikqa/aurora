@@ -1,0 +1,32 @@
+#!/bin/bash
+cd /home/nick/src
+cd python-snippets
+bzr update
+cd ..
+cd pymox
+svn update
+cd ..
+cd phonegap
+git pull
+cd ..
+cd Handbrake
+svn update
+cd ..
+cd gpick
+svn update
+cd ..
+cd gpapers
+svn update
+cd ..
+cd gmate
+git pull
+cd ..
+cd caffeine
+bzr update
+cd ..
+cd appEngineLauncher
+svn update
+cd ..
+cd googleappengine
+svn update
+exit
