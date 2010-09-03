@@ -1,18 +1,37 @@
 #!/bin/bash
-SOURCE=$HOME/src
+
+# This script will detect the version control system being used and
+# will run the appropriate update command that will get the latest 
+# version of the code.
+
+SOURCE=$HOME/bin/src
 
 cd $SOURCE
 
 #Search for projects checked out using subversion
-find -maxdepth 2 -name '.svn' -exec dirname {} \;
+for f in `find -maxdepth 2 -name '.svn' -exec dirname {} \;`
+do
+    cd $f
+    echo $f "being updated: "
+    svn update
+    cd  $SOURCE
+done
 
 #Search for projects checked out using git
 for f in `find -maxdepth 2 -name '.git' -exec dirname {} \;`
 do
     cd $f
-    pwd
+    echo $f "being updated: "
+    git pull
     cd $SOURCE
 done
 
 #Search for projects checked out using mercurial
-find -maxdepth 2 -name '.hg' -exec dirname {} \;
+for f in `find -maxdepth 2 -name '.hg' -exec dirname {} \;`
+do
+    cd $f
+    echo $f "being updated: "
+    hg pull
+    hg update
+    cd $SOURCE
+done
