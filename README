@@ -1,2 +1,5 @@
 This is a collection of scripts that automate various tasks.
 
+update is a script that automatically pulls the latest code from the code repositories.
+It works with git, subversion and mercurial.
+
