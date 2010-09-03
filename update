@@ -1,32 +1,18 @@
 #!/bin/bash
-cd /home/nick/src
-cd python-snippets
-bzr update
-cd ..
-cd pymox
-svn update
-cd ..
-cd phonegap
-git pull
-cd ..
-cd Handbrake
-svn update
-cd ..
-cd gpick
-svn update
-cd ..
-cd gpapers
-svn update
-cd ..
-cd gmate
-git pull
-cd ..
-cd caffeine
-bzr update
-cd ..
-cd appEngineLauncher
-svn update
-cd ..
-cd googleappengine
-svn update
-exit
+SOURCE=$HOME/src
+
+cd $SOURCE
+
+#Search for projects checked out using subversion
+find -maxdepth 2 -name '.svn' -exec dirname {} \;
+
+#Search for projects checked out using git
+for f in `find -maxdepth 2 -name '.git' -exec dirname {} \;`
+do
+    cd $f
+    pwd
+    cd $SOURCE
+done
+
+#Search for projects checked out using mercurial
+find -maxdepth 2 -name '.hg' -exec dirname {} \;
