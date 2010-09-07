@@ -1,0 +1,5 @@
+This is a collection of scripts that aid in finding common writing problems.
+The scripts are taken from Matt Might's article on improving PhD writing.
+http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
+
+It highlights text based on a set of weasel-words, passive-voice and duplicate words.
