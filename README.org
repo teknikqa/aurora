@@ -4,7 +4,7 @@ This is a collection of scripts that automate various tasks.
 
 These are used by my bash_profile.
 
-*reviewer 
+* reviewer 
 
 This is a collection of scripts that check for bad writing
 
