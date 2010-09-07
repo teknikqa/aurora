@@ -1,5 +1,9 @@
 This is a collection of scripts that automate various tasks.
 
+bash_aliases and bashrc are used by my bash_profile.
+
+reviewer is a collection of scripts that check for bad writing
+
 update is a script that automatically pulls the latest code from the code repositories.
 It works with git, subversion and mercurial.
 
