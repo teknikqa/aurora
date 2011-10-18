@@ -156,6 +156,10 @@ export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 shopt -s cdspell
 
+# Expand short URLs with option to specify maximum redirects
+# http://pthree.org/2011/10/18/use-wget1-to-expand-shortened-urls
+expandurl() { wget -O - --max-redirect={2:-0} $1 2>&1 | grep '^Location' }
+
 #CDPATH='.:..:../..:/home/nick/www/html'
 
 #change editor
